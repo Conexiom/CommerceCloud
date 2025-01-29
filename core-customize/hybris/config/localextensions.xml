@@ -273,6 +273,8 @@
     <extension name='saporderexchangebackoffice'/>
     <extension name='sapcoreaddon'/>-->
 
+<!-- Activate Swagger -->
+   <extension name='swaggerintegration'/>
 
   </extensions>
 </hybrisconfig>
