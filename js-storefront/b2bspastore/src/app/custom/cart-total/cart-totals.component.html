@@ -1,0 +1,12 @@
+<div class="cx-cart-po po-container" *ngIf="cart$ | async as cart">
+  <h3 class="cx-summary-heading">Upload PO</h3>
+  <input type="file" (change)="onFileSelected($event)" accept="application/pdf" #fileInput>
+  <button (click)="onSubmit()" [disabled]="!selectedFile">Upload</button>
+  <p class="message">{{ uploadMessage }}</p>
+  <div class="overlay" *ngIf="isLoading | async">
+    <cx-spinner></cx-spinner>
+  </div>
+</div>
+<ng-container *ngIf="cart$ | async as cart">
+  <cx-order-summary [cart]="cart"></cx-order-summary>
+</ng-container>
