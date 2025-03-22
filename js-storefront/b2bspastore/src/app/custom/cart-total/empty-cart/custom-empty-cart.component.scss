@@ -1,0 +1,34 @@
+.custom-empty-cart-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.custom-empty-cart-left,
+.custom-empty-cart-right {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Stack on small screens */
+@media (max-width: 768px) {
+  .custom-empty-cart-wrapper {
+    flex-direction: column;
+  }
+
+  .custom-empty-cart-left,
+  .custom-empty-cart-right {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+::ng-deep {
+.custom-empty-cart-wrapper{
+  cx-order-summary {
+    display: none;
+  }
+}
+}
